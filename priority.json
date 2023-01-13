@@ -1,0 +1,29 @@
+{
+  "rules": [
+    {
+      "has_bounty": true,
+      "priority": 3
+    },
+    {
+      "predicate_id": "047cb849-0d0e-4c24-a4a4-51e53336b1ea",
+      "priority": 6
+    },
+    {
+      "is_mdt": true,
+      "priority": 9
+    },
+    {
+      "has_multiplier": true,
+      "priority": 12
+    },
+    {
+      "has_citations": false,
+      "priority": 17
+    },
+    {
+      "owned_by_golden": true,
+      "priority": 19
+    }
+  ],
+  "default_priority": 15
+}

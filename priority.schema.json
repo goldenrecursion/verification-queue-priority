@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "Verification queue priority configuration",
+  "type": "object",
+  "properties": {
+    "rules": {
+      "type": "array",
+      "description": "Array of rules. The first rule that matches sets the priority.",
+      "items": {
+        "$ref":  "#/definitions/priority_rule"
+      }
+    },
+    "default_priority": {
+      "type": "number",
+      "description": "Priority that is used in case no rule is matched.",
+      "minimum": 1,
+      "maximum": 20
+    }
+  },
+  "required": ["rules", "default_priority"],
+  "definitions": {
+    "priority_rule": {
+      "type": "object",
+      "properties": {
+        "has_bounty": {
+          "type": "boolean",
+          "description": "Flag to check if there is any bounty on the verification item"
+        },
+        "is_mdt": {
+          "type": "boolean",
+          "description": "Flag to check if the verification item is a minimum disambiguation triple"
+        },
+        "has_multiplier": {
+          "type": "boolean",
+          "description": "Flag to check if there is a predicate multiplier configured"
+        },
+        "has_citations": {
+          "type": "boolean",
+          "description": "Flag to check if the verification item has citations when the citation requirement is 'recommended'"
+        },
+        "owned_by_golden": {
+          "type": "boolean",
+          "description": "Flag to check if the verification item is submitted by the Golden User (0x0000000000000000000000000000000000000000)"
+        },
+        "priority": {
+          "type": "integer",
+          "description": "Priority that is set when the rule is matched",
+          "minimum": 1,
+          "maximum": 20
+        }
+      },
+      "required": ["priority"]
+    }
+  }
+}

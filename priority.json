@@ -21,7 +21,7 @@
       "priority": 17
     },
     {
-      "owned_by_golden": true,
+      "is_owned_by_golden": true,
       "priority": 19
     }
   ],

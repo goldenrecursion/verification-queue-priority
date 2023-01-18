@@ -38,7 +38,7 @@
           "type": "boolean",
           "description": "Flag to check if the verification item has citations when the citation requirement is 'recommended'"
         },
-        "owned_by_golden": {
+        "is_owned_by_golden": {
           "type": "boolean",
           "description": "Flag to check if the verification item is submitted by the Golden User (0x0000000000000000000000000000000000000000)"
         },
